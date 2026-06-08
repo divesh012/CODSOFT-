@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Spam Detection</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>SMS Spam Detection System</h1>
+
+            <p class="subtitle">
+                Classify SMS messages as Spam or Not Spam using Machine Learning and Natural Language Processing.
+            </p>
+
+            <div class="examples">
+
+                <div class="example spam-example">
+                    <h3>Spam Example</h3>
+                    <p>
+                        Congratulations! You have won a free smartphone.
+                        Click the link below to claim your reward.
+                    </p>
+                </div>
+
+                <div class="example ham-example">
+                    <h3>Not Spam Example</h3>
+                    <p>
+                        Hi Divesh, the meeting is scheduled for tomorrow at 10:00 AM.
+                    </p>
+                </div>
+
+            </div>
+
+            <textarea
+                id="message"
+                placeholder="Enter your SMS message here..."></textarea>
+
+            <button onclick="predictSpam()">
+                Analyze Message
+            </button>
+
+            <div id="result"></div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>
+            Developed by <strong>Lion Coder | dk</strong> as part of the
+            <strong>CodSoft Machine Learning Internship</strong>.
+            Powered by Flask, Scikit-Learn, TF-IDF and Naive Bayes Classification to identify spam SMS messages.
+        </p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

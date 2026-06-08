@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #e8f0ff, #f5f7fa);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.card {
+    background: white;
+    width: 100%;
+    max-width: 750px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.examples {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.example {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.spam-example {
+    background: #fff1f1;
+    border-left: 4px solid #dc3545;
+}
+
+.ham-example {
+    background: #f2fff5;
+    border-left: 4px solid #28a745;
+}
+
+.example h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.example p {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #555;
+}
+
+textarea {
+    width: 100%;
+    height: 110px;
+    padding: 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    resize: none;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+textarea:focus {
+    border-color: #2563eb;
+}
+
+button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#result {
+    margin-top: 12px;
+    min-height: 50px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    visibility: hidden;
+}
+
+.result-spam {
+    background: #ffe5e5;
+    color: #c62828;
+    border: 1px solid #f5bcbc;
+}
+
+.result-safe {
+    background: #e9fff0;
+    color: #1b7f3b;
+    border: 1px solid #b9e8c8;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    color: #666;
+    border-top: 1px solid #e5e7eb;
+    background: white;
+}
+
+@media (max-width: 768px) {
+
+    .card {
+        padding: 20px;
+    }
+
+    .examples {
+        grid-template-columns: 1fr;
+    }
+
+    textarea {
+        height: 100px;
+    }
+}
